@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<br />
+<div class="row">
+    <div class="well">
+        <button id="btnProxyCaller" class="btn btn-primary">Call Proxy</button>
+    </div>
+    <div>
+        <table class="table table-responsive table-condensed">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User Id</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+            <tbody id="post_table">
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $('#btnProxyCaller').click(function (e) {
+            $.ajax({
+                type: "GET",
+                url: "/api/test",
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (i, item) {
+                        var $tr = $('<tr>').append(
+                            $('<td>').text(item.id),
+                            $('<td>').text(item.userId),
+                            $('<td>').text(item.title),
+                            $('<td>').text(item.body)
+                        ); 
+                        $tr.appendTo('#post_table');
+                    });
+                }
+            });
+        });
+    });
+</script>
+}

@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.1",
+    "dotnet-test-xunit": "2.2.0-*",
+    "Microsoft.DotNet.InternalAbstractions": "1.0.0",
+    "xunit": "2.2.0-*",
+    "NetCoreStack.DispatchProxyAsync": "1.0.0-*",
+    "NetCoreStack.Test.Common": "1.0.0-*"
+  },
+
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.1.0",
+          "type": "platform"
+        },
+        "System.Diagnostics.TraceSource": "4.3.0-*"
+      }
+    },
+    "net451": {}
+  }
+}
