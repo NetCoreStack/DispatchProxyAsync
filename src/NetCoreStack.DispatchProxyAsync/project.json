@@ -1,12 +1,6 @@
 ﻿{
   "version": "1.0.0-*",
 
-  "dependencies": {
-    "NETStandard.Library": "1.6.1",
-    "System.Reflection.Emit": "4.3.0",
-    "System.Reflection.TypeExtensions": "4.3.0"
-  },
-
   "frameworks": {
     "netstandard1.3": {
       "dependencies": {
@@ -15,6 +9,8 @@
         "System.Diagnostics.Debug": "4.3.0",
         "System.Linq": "4.3.0",
         "System.Reflection": "4.3.0",
+        "System.Reflection.Emit": "4.3.0",
+        "System.Reflection.TypeExtensions": "4.3.0",
         "System.Reflection.Emit.ILGeneration": "4.3.0",
         "System.Reflection.Extensions": "4.3.0",
         "System.Reflection.Primitives": "4.3.0",
@@ -23,7 +19,6 @@
         "System.Threading": "4.3.0",
         "System.Runtime.InteropServices": "4.3.0"
       }
-    },
-    "netstandard1.6": {}
+    }
   }
 }
