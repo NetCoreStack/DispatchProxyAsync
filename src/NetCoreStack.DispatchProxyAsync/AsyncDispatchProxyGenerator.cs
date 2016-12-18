@@ -160,11 +160,6 @@ namespace System.Reflection
             pb.AddInterfaceImpl(interfaceType);
 
             Type generatedProxyType = pb.CreateType();
-
-#if NET451
-            s_proxyAssembly._ab.Save("ProxyBuilder2.dll");
-#endif
-
             return generatedProxyType;
         }
 
@@ -287,20 +282,11 @@ namespace System.Reflection
 
             public ProxyAssembly()
             {
-#if NET451
-                AssemblyBuilderAccess access = AssemblyBuilderAccess.RunAndSave;
-#else
                 AssemblyBuilderAccess access = AssemblyBuilderAccess.Run;
-#endif
                 var assemblyName = new AssemblyName("ProxyBuilder2");
                 assemblyName.Version = new Version(1, 0, 0);
                 _ab = AssemblyBuilder.DefineDynamicAssembly(assemblyName, access);
-
-#if NET451
-                _mb = _ab.DefineDynamicModule("testmod", "ProxyBuilder2.dll");
-#else
                 _mb = _ab.DefineDynamicModule("testmod");
-#endif
             }
 
             // Gets or creates the ConstructorInfo for the IgnoresAccessChecksAttribute.
@@ -465,9 +451,9 @@ namespace System.Reflection
 
         private class ProxyBuilder
         {
-            private static readonly MethodInfo s_delegateInvoke = typeof(DispatchProxyHandler).GetTypeInfo().GetMethod("InvokeHandle");
-            private static readonly MethodInfo s_delegateInvokeAsync = typeof(DispatchProxyHandler).GetTypeInfo().GetMethod("InvokeAsyncHandle");
-            private static readonly MethodInfo s_delegateinvokeAsyncT = typeof(DispatchProxyHandler).GetTypeInfo().GetMethod("InvokeAsyncHandleT");
+            private static readonly MethodInfo s_delegateInvoke = typeof(DispatchProxyHandler).GetMethod("InvokeHandle");
+            private static readonly MethodInfo s_delegateInvokeAsync = typeof(DispatchProxyHandler).GetMethod("InvokeAsyncHandle");
+            private static readonly MethodInfo s_delegateinvokeAsyncT = typeof(DispatchProxyHandler).GetMethod("InvokeAsyncHandleT");
 
             private ProxyAssembly _assembly;
             private TypeBuilder _tb;

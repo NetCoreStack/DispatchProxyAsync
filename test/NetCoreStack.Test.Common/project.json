@@ -3,13 +3,12 @@
 
   "dependencies": {
     "Microsoft.AspNetCore.Mvc.Core": "1.1.0",
-    "NetCoreStack.Common": "1.0.0-rc-36",
+    "NetCoreStack.Common": "1.0.0-*",
     "NetCoreStack.DispatchProxyAsync": "1.0.0-*",
     "NETStandard.Library": "1.6.1"
   },
 
   "frameworks": {
-    "net451": {},
     "netstandard1.6": {}
   }
 }
