@@ -711,7 +711,7 @@ namespace System.Reflection
                 }
                 else
                 {
-                    il.Emit(OpCodes.Nop);
+                    il.Emit(OpCodes.Pop);
                 }
 
                 il.Emit(OpCodes.Ret);
