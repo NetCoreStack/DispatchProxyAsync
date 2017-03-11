@@ -1,26 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{54EEBEAF-81F0-47AA-B691-3A9C71AD5166}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A14A4EF5-C0B1-4FA6-8526-5BE7E654D55D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreStack.DispatchProxyAsync", "src\NetCoreStack.DispatchProxyAsync\NetCoreStack.DispatchProxyAsync.xproj", "{67D1CE34-B124-452F-9415-68A0DEB0BCA6}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreStack.DispatchProxyAsync.Tests", "test\NetCoreStack.DispatchProxyAsync.Tests\NetCoreStack.DispatchProxyAsync.Tests.xproj", "{4285CC40-3C29-409A-B8B1-95FAA7208C85}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3CE89F5-AA04-45CC-AE11-3DCEBCC6FA67}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
 		NuGet.config = NuGet.config
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebClient", "test\WebClient\WebClient.xproj", "{259E1D73-4630-4ABF-BF8A-61370AF7A8B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreStack.DispatchProxyAsync", "src\NetCoreStack.DispatchProxyAsync\NetCoreStack.DispatchProxyAsync.csproj", "{67D1CE34-B124-452F-9415-68A0DEB0BCA6}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreStack.Test.Common", "test\NetCoreStack.Test.Common\NetCoreStack.Test.Common.xproj", "{BBF91245-0922-4228-887B-FB86065FBA1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreStack.DispatchProxyAsync.Tests", "test\NetCoreStack.DispatchProxyAsync.Tests\NetCoreStack.DispatchProxyAsync.Tests.csproj", "{4285CC40-3C29-409A-B8B1-95FAA7208C85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "test\WebClient\WebClient.csproj", "{259E1D73-4630-4ABF-BF8A-61370AF7A8B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreStack.Test.Common", "test\NetCoreStack.Test.Common\NetCoreStack.Test.Common.csproj", "{BBF91245-0922-4228-887B-FB86065FBA1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
