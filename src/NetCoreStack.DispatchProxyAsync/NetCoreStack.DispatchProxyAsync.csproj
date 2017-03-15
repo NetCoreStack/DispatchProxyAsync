@@ -4,6 +4,7 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <AssemblyName>NetCoreStack.DispatchProxyAsync</AssemblyName>
     <PackageId>NetCoreStack.DispatchProxyAsync</PackageId>
+    <Version>1.1.0</Version>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
