@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NetCoreStack.Common;
+using NetCoreStack.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NetCoreStack.Test.Common
 {
-    public interface IGuidelineApi : IApiContract, IDependency
+    public interface IGuidelineApi : IApiContract
     {
         void VoidOperation();
 

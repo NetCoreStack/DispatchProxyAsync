@@ -2,12 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using NetCoreStack.Common;
-using NetCoreStack.Common.Extensions;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -16,17 +12,6 @@ namespace NetCoreStack.Test.Common
     public abstract class BaseApiResult : ActionResult
     {
         private readonly Type _resultType;
-
-        protected bool IsDataSourceResult
-        {
-            get
-            {
-                if (_resultType != null)
-                    return typeof(CollectionResult).IsAssignableFrom(_resultType);
-
-                return false;
-            }
-        }
 
         public string Message { get; set; }
 
@@ -69,18 +54,6 @@ namespace NetCoreStack.Test.Common
                     if (underlyingTypes.Length > 0)
                         MetadataInner = _resultType.GetGenericArguments()[0].FullName;
                 }
-
-                if (IsDataSourceResult)
-                {
-                    if (instance != null)
-                    {
-                        var dataSourceResult = instance as CollectionResult;
-                        if (dataSourceResult.Data != null && dataSourceResult.Data.GetType().IsGenericType())
-                        {
-                            MetadataInner = dataSourceResult.Data.GetType().GetGenericArguments()[0].FullName;
-                        }
-                    }
-                }
             }
         }
 
@@ -92,12 +65,6 @@ namespace NetCoreStack.Test.Common
             var response = context.HttpContext.Response;
             response.StatusCode = StatusCode;
             var executor = context.HttpContext.RequestServices.GetRequiredService<ObjectResultExecutor>();
-            if (Metadata == typeof(CollectionResult).FullName)
-            {
-                var collectionResult = executor.ExecuteAsync(context, new ObjectResult(GetResultOrValue));
-                return collectionResult;
-            }
-
             var result = executor.ExecuteAsync(context, new ObjectResult(this));
             return result;
         }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-// Demonstrates proxies can be made for internal types
+﻿// Demonstrates proxies can be made for internal types
 internal interface TestType_InternalInterfaceService
 {
     string Echo(string message);

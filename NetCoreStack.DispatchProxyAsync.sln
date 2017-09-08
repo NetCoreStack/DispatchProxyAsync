@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{54EEBEAF-81F0-47AA-B691-3A9C71AD5166}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Desktop\Configurations.props = ..\..\Desktop\Configurations.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A14A4EF5-C0B1-4FA6-8526-5BE7E654D55D}"
 EndProject
@@ -52,5 +55,8 @@ Global
 		{4285CC40-3C29-409A-B8B1-95FAA7208C85} = {A14A4EF5-C0B1-4FA6-8526-5BE7E654D55D}
 		{259E1D73-4630-4ABF-BF8A-61370AF7A8B5} = {A14A4EF5-C0B1-4FA6-8526-5BE7E654D55D}
 		{BBF91245-0922-4228-887B-FB86065FBA1C} = {A14A4EF5-C0B1-4FA6-8526-5BE7E654D55D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E352075-1585-4353-8FCD-491384D6FBAA}
 	EndGlobalSection
 EndGlobal
