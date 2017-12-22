@@ -66,6 +66,11 @@ namespace NetCoreStack.Test.Common
         string this[string key] { get; set; }
     }
 
+    public interface TypeType_GenericMethod
+    {
+        T Echo<T>(T messages);
+    }
+
     // Negative -- demonstrates trying to use a class for the interface type for the proxy
     public class TestType_ConcreteClass
     {
